@@ -1,17 +1,32 @@
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Kalkulator {
 	private static Scanner scanner = new Scanner(System.in);
-	private static long ILOSC_SZTUK;
+	private static long QUANTITY;
+	private static BigDecimal PRICE;
 	public static void main(String[] args) {
-		scanNumber();
-
+		scanQuantity();
+		scannPrice();
 
 
 	}
 
-	public static void scanNumber(){
+	public static void scanQuantity(){
 		System.out.println("Wprowadz ilosc sztuk");
-		ILOSC_SZTUK = scanner.nextLong();
+		QUANTITY = scanner.nextLong();
+	}
+
+	public static void scannPrice(){
+		System.out.println("Wprowadz cene za sztuke");
+		PRICE = scanner.nextBigDecimal();
+	}
+
+	public static long getQUANTITY() {
+		return QUANTITY;
+	}
+
+	public static BigDecimal getPRICE() {
+		return PRICE;
 	}
 }
